@@ -12,16 +12,21 @@ export const counterSlice = createSlice({
         //logic to update the value
         // actions are created inside the reducers
         increment: (state,data) => {
-            if(!data.value){
+            if(!data.payload){
                 state.value = state.value + 1
+            }else{
+                state.value = state.value + data.payload
             }
-            state.value = state.value + data.payload
+            
+            
         },
         decrement: (state,data) => {
-            if(!data.value){
+            if(!data.payload){
                 state.value = state.value - 1
+            }else{
+                state.value -= data.payload
             }
-            state.value -= data.payload
+            
         },
         reset: (state) => {
             state.value = 0;

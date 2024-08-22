@@ -6,7 +6,7 @@ import { decrement, increment, reset } from '../redux/counterSlice';
 function Counter() {
     //component can access the state by useSelector hook
     const counterValue = useSelector((state) => state.counter.value)
-    const [range,setRange] = useState('')
+    const [range,setRange] = useState()
     console.log('range=',range);
     
 
