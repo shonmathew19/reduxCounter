@@ -6,9 +6,9 @@ import { decrement, increment, reset } from '../redux/counterSlice';
 function Counter() {
     //component can access the state by useSelector hook
     const counterValue = useSelector((state) => state.counter.value)
-    const [range,setRange] = useState()
-    console.log('range=',range);
-    
+    const [range, setRange] = useState()
+    console.log('range=', range);
+
 
     //useDispatch() is a hook used to call a method in action to update the state
     const dispatch = useDispatch()
@@ -25,8 +25,8 @@ function Counter() {
                 </div>
             </div>
             <div>
-                <input className='form-control mt-3 'style={{borderColor:"blue",width:'300px'}} type="text" placeholder='enter the range'
-                onChange={(e)=>setRange(e.target.value)} />
+                <input className='form-control mt-3 ' style={{ borderColor: "blue", width: '300px' }} type="text" placeholder='enter the range'
+                    onChange={(e) => setRange(e.target.value)} />
             </div>
         </>
     )
